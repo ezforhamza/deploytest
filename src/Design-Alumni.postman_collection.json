@@ -1,0 +1,2813 @@
+{
+	"info": {
+		"_postman_id": "3f1c03f6-726b-43c4-a138-b47f9566ba0b",
+		"name": "Design-Alumni",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37421652",
+		"_collection_link": "https://codecoy-9962.postman.co/workspace/Muhammad-Fazal-E-Manan-~60c9a2d6-11f2-41bf-b09e-dd70e48e3d0d/collection/37421652-3f1c03f6-726b-43c4-a138-b47f9566ba0b?action=share&source=collection_link&creator=37421652"
+	},
+	"item": [
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Users",
+					"item": [
+						{
+							"name": "Login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    // admin\r\n  \"email\":\"admin@admin.com\",\r\n    \"password\":\"123456\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_live_url}}/auth/login",
+									"host": [
+										"{{base_live_url}}"
+									],
+									"path": [
+										"auth",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get all pending users",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/user/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"user",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get all alumni",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/user/all/alumnies",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"user",
+										"all",
+										"alumnies"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get all schools",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/user/all/schools",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"user",
+										"all",
+										"schools"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get all companies",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/user/all/companies",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"user",
+										"all",
+										"companies"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Approve user",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/user/approve-user/68515df8948e465faf8b4cbb",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"user",
+										"approve-user",
+										"68515df8948e465faf8b4cbb"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update all user",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"status\":\"active\",\r\n    \"isActive\":true,\r\n    \"isVerifiedByAdmin\":true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/user/all/users/update",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"user",
+										"all",
+										"users",
+										"update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Reject user",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/user/approve-user/68515df8948e465faf8b4cbb",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"user",
+										"approve-user",
+										"68515df8948e465faf8b4cbb"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Stats",
+					"item": [
+						{
+							"name": "stats",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/stats",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"stats"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Skills",
+					"item": [
+						{
+							"name": "Add skill",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\":  \"ability to rally others\"\r\n\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/skills",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"skills"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update skill",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\":  \"javascript\"\r\n\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/skills/685534f995d00f3a1cb08ca8",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"skills",
+										"685534f995d00f3a1cb08ca8"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete skill",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/skills/6855351d1b0dcf6a74ab80c8",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"skills",
+										"6855351d1b0dcf6a74ab80c8"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "All skills",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/skills",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"skills"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "About",
+					"item": [
+						{
+							"name": "Create about",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"content\": \"<p>Welcome to our app! We are dedicated to providing top-notch services to enhance your experience.</p>\\n\\t\\t<h3>Our Mission</h3>\\n\\t\\t<p>Our mission is to revolutionize the way users interact with digital platforms, offering seamless and efficient services.</p>\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/about",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"about"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update about",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"content\": \"<p>Welcome to our app! We are dedicated to providing top-notch services to enhance your experience.</p>\\n\\t\\t<h3>Our Mission</h3>\\n\\t\\t<p>Our mission is to revolutionize the way users interact with digital platforms, offering seamless and efficient services.</p></p>\\n\\t\\t<h3>Our Mission</h3>\\n\\t\\t\"\r\n  \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/about/6807866b689bd7946db04a22",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"about",
+										"6807866b689bd7946db04a22"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "About",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/about",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"about"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Term & condition",
+					"item": [
+						{
+							"name": "Term and condition",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/termAndCondition",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"termAndCondition"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create TC",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"content\": \"<p>Welcome to our app! By accessing our services, you agree to comply with our terms and conditions.</p>\\n\\t\\t<h3>1. Acceptance of Terms</h3>\\n\\t\\t<p>By using our platform, you agree to abide by these terms. If you do not agree, please do not use our services.</p>\\n\\t\\t<h3>2. User Responsibilities</h3>\\n\\t\\t<p>Users are responsible for maintaining the confidentiality of their accounts and any activities that occur under their accounts.</p>\\n\\t\\t<h3>3. Intellectual Property</h3>\\n\\t\\t<p>All content provided on this platform is the intellectual property of our company and may not be used without permission.</p>\\n\\t\\t<h3>4. Termination</h3>\\n\\t\\t<p>We reserve the right to terminate or suspend your account if you violate any of these terms.</p>\\n\\t\\t<h3>5. Contact Us</h3>\\n\\t\\t<p>If you have any questions, please reach out to us at <span style=\\\"color:blue;\\\">support@example.com</span>.</p>\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/termAndCondition",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"termAndCondition"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update TC",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"content\":\"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/termAndCondition",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"termAndCondition"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Privacy policy",
+					"item": [
+						{
+							"name": "Privacy policy",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/privacyPolicy",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"privacyPolicy"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create PP",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"content\": \"<p>Your privacy is important to us. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.</p>\\n\\t\\t<h3>1. Information We Collect</h3>\\n\\t\\t<p>We may collect personal information such as your name, email address, phone number, and usage data when you interact with our platform.</p>\\n\\t\\t<h3>2. How We Use Your Information</h3>\\n\\t\\t<p>We use the information we collect to provide and improve our services, communicate with you, and ensure the security of our platform.</p>\\n\\t\\t<h3>3. Data Security</h3>\\n\\t\\t<p>We implement industry-standard security measures to protect your personal data. However, no online service can guarantee absolute security.</p>\\n\\t\\t<h3>4. Third-Party Services</h3>\\n\\t\\t<p>We may share certain information with third-party service providers to enhance our platform's functionality and user experience.</p>\\n\\t\\t<h3>5. Your Rights</h3>\\n\\t\\t<p>You have the right to access, update, or delete your personal information. If you have any privacy-related concerns, please contact us.</p>\\n\\t\\t<h3>6. Contact Us</h3>\\n\\t\\t<p>If you have any questions about this Privacy Policy, you can reach out to us at <span style=\\\"color:blue;\\\">support@example.com</span>.</p>\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/privacyPolicy",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"privacyPolicy"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update PP",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"content\":\"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/about",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"about"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Schools",
+					"item": [
+						{
+							"name": "Create school",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n   \"name\":\"Greenwood High School\",\r\n    \"address\":\"123 Maple Street, Springfield\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/schools",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"schools"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update school",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n   \"name\":\"Greenwood High Schools\",\r\n    \"address\":\"123 Maple Street, Springfield\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/schools/68592f5962074ed7e7d84420",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"schools",
+										"68592f5962074ed7e7d84420"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete school",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/schools/68592f5962074ed7e7d84420",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"schools",
+										"68592f5962074ed7e7d84420"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Schools list",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/schools",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"schools"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Import school",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"schools\":[\r\n{\r\n      \"name\":\"Greenwood High School\",\r\n     \"address\":\"123 Maple Street, Springfield\"\r\n},\r\n{\r\n      \"name\":\"Hilltop International School\",\r\n     \"address\":\"101 Hilltop Road, Crestview\"\r\n}\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/schools/import",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"schools",
+										"import"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Jobs",
+					"item": [
+						{
+							"name": "Jobs list",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NTJiYzY3M2NkYTI4NDE5ZGEwNWM3NSIsInJvbGUiOiJjb21wYW55IiwiaXNBY3RpdmUiOnRydWUsInRva2VuVHlwZSI6ImFjY2VzcyIsImlhdCI6MTc1MDY4ODM3NiwiZXhwIjoxNzgyMjQ1OTc2LCJhdWQiOiJyb290IiwiaXNzIjoiY29tcGFueUBjb21wYW55LmNvbSIsInN1YiI6ImNvbXBhbnlAY29tcGFueS5jb20ifQ.TK5BJCBOodHGMKLOt7kJvNrr6Iu-MNfXtTA8K4SJciY",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/jobs",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"jobs"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update status",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NTJiYzY3M2NkYTI4NDE5ZGEwNWM3NSIsInJvbGUiOiJjb21wYW55IiwiaXNBY3RpdmUiOnRydWUsInRva2VuVHlwZSI6ImFjY2VzcyIsImlhdCI6MTc1MDY4ODM3NiwiZXhwIjoxNzgyMjQ1OTc2LCJhdWQiOiJyb290IiwiaXNzIjoiY29tcGFueUBjb21wYW55LmNvbSIsInN1YiI6ImNvbXBhbnlAY29tcGFueS5jb20ifQ.TK5BJCBOodHGMKLOt7kJvNrr6Iu-MNfXtTA8K4SJciY",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/jobs/toggle/status/68596352453b986be6bce1fd",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"jobs",
+										"toggle",
+										"status",
+										"68596352453b986be6bce1fd"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Post reports",
+					"item": [
+						{
+							"name": "All Reports",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/postReports/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"postReports",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Report by id",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/postReports/685e2fc38e04e9931ea1274d",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"postReports",
+										"685e2fc38e04e9931ea1274d"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete post & reports",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/postReports/685e4301a57905b744b20bb2",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"postReports",
+										"685e4301a57905b744b20bb2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Keep post",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/postReports/keep/685e405b7a1d1f9437fe192f",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"postReports",
+										"keep",
+										"685e405b7a1d1f9437fe192f"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Referral Code",
+					"item": [
+						{
+							"name": "All codes",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/referralCode/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"referralCode",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update status",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/referralCode/toggle/status/685e6fc729d0d37ef0f3db19",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"referralCode",
+										"toggle",
+										"status",
+										"685e6fc729d0d37ef0f3db19"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update code",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"code\": \"SUMMER2025\",\r\n  \"duration\": \"monthly\",\r\n  \"assignedTo\": [\"userId1\", \"userId2\"],\r\n  \"startDate\": \"2025-07-01T00:00:00.000Z\",\r\n  \"expiryDate\": \"2025-10-01T00:00:00.000Z\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/referralCode/685e4cdfa7b81e71be631ba9",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"referralCode",
+										"685e4cdfa7b81e71be631ba9"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete code",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"code\": \"SUMMER2025\",\r\n  \"duration\": \"monthly\",\r\n  \"assignedTo\": [\"userId1\", \"userId2\"],\r\n  \"startDate\": \"2025-07-01T00:00:00.000Z\",\r\n  \"expiryDate\": \"2025-10-01T00:00:00.000Z\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/referralCode/685e4cdfa7b81e71be631ba9",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"referralCode",
+										"685e4cdfa7b81e71be631ba9"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create code",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"code\": \"AIumni2026\",\r\n  \"duration\": \"annual\",\r\n  \"assignedTo\": [\"userId1\", \"userId2\"],\r\n  \"startDate\": \"2025-07-01T00:00:00.000Z\",\r\n  \"expiryDate\": \"2025-10-01T00:00:00.000Z\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/referralCode/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"referralCode",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NTJiYWI5M2NkYTI4NDE5ZGEwNWM2ZiIsInJvbGUiOiJhZG1pbiIsImlzQWN0aXZlIjp0cnVlLCJ0b2tlblR5cGUiOiJhY2Nlc3MiLCJpYXQiOjE3NTAyNTIyNDYsImV4cCI6MTc4MTgwOTg0NiwiYXVkIjoicm9vdCIsImlzcyI6ImFkbWluQGFkbWluLmNvbSIsInN1YiI6ImFkbWluQGFkbWluLmNvbSJ9.bO9i_Cr4nF8bkPbbStBTwOcEtIWO0m5ZnWSQhhyK5eg",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Roles",
+					"item": [
+						{
+							"name": "Account types",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_live_url}}/role/list",
+									"host": [
+										"{{base_live_url}}"
+									],
+									"path": [
+										"role",
+										"list"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Auth",
+					"item": [
+						{
+							"name": "Account setup",
+							"item": [
+								{
+									"name": "Profile setup",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NTE1ZGY4OTQ4ZTQ2NWZhZjhiNGNiYiIsInJvbGUiOiJhbHVtbmkiLCJpc0FjdGl2ZSI6dHJ1ZSwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzUwMTYzMDY5LCJleHAiOjE3ODE3MjA2NjksImF1ZCI6InJvb3QiLCJpc3MiOiJhbHVtbmlAYWx1bW5pLmNvbSIsInN1YiI6ImFsdW1uaUBhbHVtbmkuY29tIn0.itEAEfIuJo-YPMz8IsdKIgrIGdt1asrPZnVxdVGV0ig",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "// aalumni login\r\n\r\n{\r\n    \"firstname\": \"Alumni\",\r\n    \"lastname\": \"User\",\r\n    \"phoneNo\": \"+923001234567\",\r\n  \"dob\": \"1992-04-15T00:00:00.000Z\",\r\n  \"age\": 32,\r\n  \"gender\": \"male\"\r\n//   \"location\": {\r\n//     \"type\": \"Point\",\r\n//     \"coordinates\": [74.35840852434642,31.528498036279966 ],\r\n//     \"address\": \"Lahore\"\r\n//   },\r\n//   \"country\": \"Pakistan\",\r\n//   \"state\": \"Punjab\",\r\n\r\n//   \"company\": \"InnovaTech\",\r\n//   \"school\": \"FAST NUCES\",\r\n//   \"website\": \"https://innova-tech.com\",\r\n//   \"overview\": \"Innovative tech solutions for modern businesses.\",\r\n//   \"industry\": \"Software Development\",\r\n}\r\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url}}/user/update-profile",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"user",
+												"update-profile"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Account setup",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NTE1ZGY4OTQ4ZTQ2NWZhZjhiNGNiYiIsInJvbGUiOiJhbHVtbmkiLCJpc0FjdGl2ZSI6dHJ1ZSwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzUwMTYzMDY5LCJleHAiOjE3ODE3MjA2NjksImF1ZCI6InJvb3QiLCJpc3MiOiJhbHVtbmlAYWx1bW5pLmNvbSIsInN1YiI6ImFsdW1uaUBhbHVtbmkuY29tIn0.itEAEfIuJo-YPMz8IsdKIgrIGdt1asrPZnVxdVGV0ig",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "// alumni \r\n\r\n{\r\n \"education\": [\r\n    {\r\n      \"degree\": \"B.Sc Computer Science\",\r\n      \"school\": \"NY University\",\r\n      \"fieldOfWork\":\"Computer Science\",\r\n      \"startDate\":\"2021-04-15T00:00:00.000Z\",\r\n    \"endDate\":\"2025-04-15T00:00:00.000Z\"\r\n    },\r\n    {\r\n      \"degree\": \"M.Sc Computer Science\",\r\n      \"school\": \"NY University\",\r\n      \"fieldOfWork\":\"Backend\",\r\n           \"startDate\":\"1992-04-15T00:00:00.000Z\",\r\n    \"endDate\":\"1992-04-15T00:00:00.000Z\"\r\n    }\r\n  ],\r\n  \"workExperience\": [\r\n    {\r\n      \"company\": \"Google\",\r\n      \"jobTitle\": \"Software Engineer\",\r\n       \"startDate\":\"2021-04-15T00:00:00.000Z\",\r\n      \"currentlyWorking\":true,\r\n      \"description\":\"this is the overview for work...\"\r\n    },\r\n    {\r\n      \"company\": \"Amazon\",\r\n      \"jobTitle\": \"Senior Engineer\",\r\n      \"startDate\":\"2021-04-15T00:00:00.000Z\",\r\n    \"endDate\":\"2025-04-15T00:00:00.000Z\",\r\n      \"description\":\"this is the overview for work...\"\r\n    }\r\n  ],\r\n  \"skills\":[\"UI/UX\" , \"Prototype\" , \"Wireframing\"],\r\n  \"cv\": \"1750945367810-White_Professional_Web_Designer_Resume.pdf\"\r\n}\r\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url}}/user/setup-account",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"user",
+												"setup-account"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Account privacy",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NTE1ZGY4OTQ4ZTQ2NWZhZjhiNGNiYiIsInJvbGUiOiJhbHVtbmkiLCJpc0FjdGl2ZSI6dHJ1ZSwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzUwMTYzMDY5LCJleHAiOjE3ODE3MjA2NjksImF1ZCI6InJvb3QiLCJpc3MiOiJhbHVtbmlAYWx1bW5pLmNvbSIsInN1YiI6ImFsdW1uaUBhbHVtbmkuY29tIn0.itEAEfIuJo-YPMz8IsdKIgrIGdt1asrPZnVxdVGV0ig",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "\r\n{\r\n\"isPrivateProfile\":true, //true / false\r\n\"isLocationPrivate\":false,\r\n\"isBussinessCardPrivate\":true\r\n}\r\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url}}/user/update-profile",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"user",
+												"update-profile"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Forgot-password",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"email\":\"alumni@alumni.com\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url}}/auth/forgot-password",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"auth",
+												"forgot-password"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Verify-otp",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"email\":\"alumni@alumni.com\",\r\n    \"otp\":\"978048\"\r\n}\r\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url}}/auth/verify-otp",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"auth",
+												"verify-otp"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Reset-password",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n   \r\n    \"email\":\"alumni@alumni.com\",\r\n    \"otp\":\"978048\",\r\n    \"password\":\"123456\",\r\n    \"confirmPassword\":\"123456\"\r\n}\r\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url}}/auth/reset-password",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"auth",
+												"reset-password"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Change-password",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NTE1ZGY4OTQ4ZTQ2NWZhZjhiNGNiYiIsInJvbGUiOiJhbHVtbmkiLCJpc0FjdGl2ZSI6dHJ1ZSwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzUwMTYzMDY5LCJleHAiOjE3ODE3MjA2NjksImF1ZCI6InJvb3QiLCJpc3MiOiJhbHVtbmlAYWx1bW5pLmNvbSIsInN1YiI6ImFsdW1uaUBhbHVtbmkuY29tIn0.itEAEfIuJo-YPMz8IsdKIgrIGdt1asrPZnVxdVGV0ig",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"oldPassword\":\"123456\",\r\n    \"newPassword\":\"123456\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url}}/auth/change-password",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"auth",
+												"change-password"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Delete user by user id",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/user/67efd48574a7b217f22f1d9c",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"user",
+												"67efd48574a7b217f22f1d9c"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get user by id",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NTE1ZGY4OTQ4ZTQ2NWZhZjhiNGNiYiIsInJvbGUiOiJhSXVtbmkiLCJpc0FjdGl2ZSI6dHJ1ZSwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzUxNDU4NDcxLCJleHAiOjE3ODMwMTYwNzEsImF1ZCI6InJvb3QiLCJpc3MiOiJhbHVtbmlAYWx1bW5pLmNvbSIsInN1YiI6ImFsdW1uaUBhbHVtbmkuY29tIn0.BGFuBUqeGHxPSDaMukWgLxgseuCJ8AxiTi9XiRtqfGU",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/user/6852bc673cda28419da05c75",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"user",
+												"6852bc673cda28419da05c75"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "upload certificates",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NTE1ZGY4OTQ4ZTQ2NWZhZjhiNGNiYiIsInJvbGUiOiJhbHVtbmkiLCJpc0FjdGl2ZSI6dHJ1ZSwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzUwMTYzMDY5LCJleHAiOjE3ODE3MjA2NjksImF1ZCI6InJvb3QiLCJpc3MiOiJhbHVtbmlAYWx1bW5pLmNvbSIsInN1YiI6ImFsdW1uaUBhbHVtbmkuY29tIn0.itEAEfIuJo-YPMz8IsdKIgrIGdt1asrPZnVxdVGV0ig",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{   \r\n    \"certificates\":[ \r\n        {\r\n            \"title\":\"UI/UX Designer Certification\",\r\n            \"url\":\"1750945367810-White_Professional_Web_Designer_Resume.pdf\"\r\n            },\r\n   {\r\n            \"title\":\"Web app Certification\",\r\n            \"url\":\"1750946366162-White_Professional_Web_Designer_Resume.pdf\"\r\n            }\r\n\r\n     ]\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url}}/user/upload-certificates",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"user",
+												"upload-certificates"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Sign up",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "// aalumni login\r\n\r\n{\r\n  \"roleId\": \"6852b9ac15e2faedc470b128\",\r\n  \"image\": \"\",\r\n    \"firstname\": \"Test\",\r\n    \"lastname\": \"Alumni\",\r\n    //   \"company\": \"InnovaTech\",\r\n//   \"school\": \"Private School\",\r\n//   \"website\": \"https://innova-tech.com\",\r\n//   \"overview\": \"School for technical fields\",\r\n//   \"industry\": \"Software Development\",\r\n  \"email\": \"alumni121@alumni.com\",\r\n    \"phoneNo\": \"+92300000000\",\r\n  \"dob\": \"1999-03-11T00:00:00.000Z\",\r\n  \"age\": 26,\r\n  \"gender\": \"male\",\r\n  \"location\": {\r\n    \"type\": \"Point\",\r\n    \"coordinates\": [-102.04543090610815,40.76151712547146  ],\r\n    \"address\": \"Washington St, Venango, NE 69168, USA\"\r\n  },\r\n  \"country\": \"USA\",\r\n  \"state\": \"Venango\",\r\n  \"password\": \"123456\",\r\n  \"confirmPassword\": \"123456\",\r\n  // alumni \r\n \"education\": [\r\n    {\r\n      \"degree\": \"B.Sc Computer Science\",\r\n      \"school\": \"NY University\",\r\n      \"fieldOfWork\":\"Computer Science\",\r\n      \"startDate\":\"2021-04-15T00:00:00.000Z\",\r\n    \"endDate\":\"2025-04-15T00:00:00.000Z\"\r\n    },\r\n    {\r\n      \"degree\": \"M.Sc Computer Science\",\r\n      \"school\": \"NY University\",\r\n      \"fieldOfWork\":\"Backend\",\r\n           \"startDate\":\"1992-04-15T00:00:00.000Z\",\r\n    \"endDate\":\"1992-04-15T00:00:00.000Z\"\r\n    }\r\n  ],\r\n  \"workExperience\": [\r\n    {\r\n      \"company\": \"Google\",\r\n      \"jobTitle\": \"Software Engineer\",\r\n       \"startDate\":\"2021-04-15T00:00:00.000Z\",\r\n      \"currentlyWorking\":true,\r\n      \"description\":\"this is the overview for work...\"\r\n    },\r\n    {\r\n      \"company\": \"Amazon\",\r\n      \"jobTitle\": \"Senior Engineer\",\r\n      \"startDate\":\"2021-04-15T00:00:00.000Z\",\r\n    \"endDate\":\"2025-04-15T00:00:00.000Z\",\r\n      \"description\":\"this is the overview for work...\"\r\n    }\r\n  ],\r\n  \"skills\":[\"UI/UX\" , \"Prototype\" , \"Wireframing\"],\r\n  \"cv\": \"1750945367810-White_Professional_Web_Designer_Resume.pdf\"\r\n\r\n\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/user/sign-up",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"user",
+										"sign-up"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Login user",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    // alumni\r\n  \"email\":\"chaiwithcode@gmail.com\",\r\n    \"password\":\"123456\"\r\n\r\n//company\r\n//  \"email\":\"company@company.com\",\r\n//  \"password\":\"123456\"\r\n\r\n//school\r\n//  \"email\":\"school@school.com\",\r\n//  \"password\":\"123456\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/auth/login",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"auth",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Google login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"google@gmail.com\",\r\n    \"displayName\":\"google\",\r\n    \"profileImage\":\"1742989196057-mani.jpg\", \r\n    \"firebaseId\":\"45468743574975465\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/auth/google-login",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"auth",
+										"google-login"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Upload",
+					"item": [
+						{
+							"name": "Upload image",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/admin/Downloads/455f07ccbaab9650f836c774c8c0d14f2b6c2fe3.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_live_url}}/uploads/image",
+									"host": [
+										"{{base_live_url}}"
+									],
+									"path": [
+										"uploads",
+										"image"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Upload file",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/C:/Users/admin/OneDrive/White Professional Web Designer Resume.pdf"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/uploads/document/file",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"uploads",
+										"document",
+										"file"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete uploaded file or image",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"filename\":\"1750943571605-Schools_Universities.xlsx\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/uploads/delete",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"uploads",
+										"delete"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "About",
+					"item": [
+						{
+							"name": "about",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/about",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"about"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Term & condition",
+					"item": [
+						{
+							"name": "Term and condition",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/termAndCondition/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"termAndCondition",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Privacy policy",
+					"item": [
+						{
+							"name": "Privacy policy",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/privacyPolicy/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"privacyPolicy",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Skills",
+					"item": [
+						{
+							"name": "All skills",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/skills",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"skills"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Schools",
+					"item": [
+						{
+							"name": "Schools list",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NTE1ZGY4OTQ4ZTQ2NWZhZjhiNGNiYiIsInJvbGUiOiJhbHVtbmkiLCJpc0FjdGl2ZSI6dHJ1ZSwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzUwNjc0NTIxLCJleHAiOjE3ODIyMzIxMjEsImF1ZCI6InJvb3QiLCJpc3MiOiJhbHVtbmlAYWx1bW5pLmNvbSIsInN1YiI6ImFsdW1uaUBhbHVtbmkuY29tIn0.8PglyL7nxXSl49jdmEMDOLo7LU0u9vBem8ORXztpzmY",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{base_url}}/schools",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"schools"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Jobs",
+					"item": [
+						{
+							"name": "Save Job",
+							"item": [
+								{
+									"name": "save & unsave",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NmJiMDc2MTg5NjlmZGQ2MmU5NDFjZSIsInJvbGUiOiJhSXVtbmkiLCJpc0FjdGl2ZSI6dHJ1ZSwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzUxODk3OTY0LCJleHAiOjE3ODM0NTU1NjQsImF1ZCI6InJvb3QiLCJpc3MiOiJjaGFpd2l0aGNvZGVAZ21haWwuY29tIiwic3ViIjoiY2hhaXdpdGhjb2RlQGdtYWlsLmNvbSJ9.764onMYA_fkXbysrJCdW8YKQFe4RriPHGvLCEd7WCVU",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n \"jobId\":\"68596352453b986be6bce1fd\"   \r\n} ",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url}}/saveJob/and/unSaveJob",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"saveJob",
+												"and",
+												"unSaveJob"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get all saved jobs",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NmJiMDc2MTg5NjlmZGQ2MmU5NDFjZSIsInJvbGUiOiJhSXVtbmkiLCJpc0FjdGl2ZSI6dHJ1ZSwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzUxODk3OTY0LCJleHAiOjE3ODM0NTU1NjQsImF1ZCI6InJvb3QiLCJpc3MiOiJjaGFpd2l0aGNvZGVAZ21haWwuY29tIiwic3ViIjoiY2hhaXdpdGhjb2RlQGdtYWlsLmNvbSJ9.764onMYA_fkXbysrJCdW8YKQFe4RriPHGvLCEd7WCVU",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/saveJob/list",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"saveJob",
+												"list"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Apply Job",
+							"item": [
+								{
+									"name": "Apply",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NTJiYzY3M2NkYTI4NDE5ZGEwNWM3NSIsInJvbGUiOiJjb21wYW55IiwiaXNBY3RpdmUiOnRydWUsInRva2VuVHlwZSI6ImFjY2VzcyIsImlhdCI6MTc1MDY4ODM3NiwiZXhwIjoxNzgyMjQ1OTc2LCJhdWQiOiJyb290IiwiaXNzIjoiY29tcGFueUBjb21wYW55LmNvbSIsInN1YiI6ImNvbXBhbnlAY29tcGFueS5jb20ifQ.TK5BJCBOodHGMKLOt7kJvNrr6Iu-MNfXtTA8K4SJciY",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"jobId\":\"68596352453b986be6bce1fd\",\r\n    \"coverLetter\":\"this is cover letter\",\r\n    \"cv\":\"\",\r\n    \"video\":\"\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url}}/applyJob",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"applyJob"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get all applications",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NTJiYzY3M2NkYTI4NDE5ZGEwNWM3NSIsInJvbGUiOiJjb21wYW55IiwiaXNBY3RpdmUiOnRydWUsInRva2VuVHlwZSI6ImFjY2VzcyIsImlhdCI6MTc1MDY4ODM3NiwiZXhwIjoxNzgyMjQ1OTc2LCJhdWQiOiJyb290IiwiaXNzIjoiY29tcGFueUBjb21wYW55LmNvbSIsInN1YiI6ImNvbXBhbnlAY29tcGFueS5jb20ifQ.TK5BJCBOodHGMKLOt7kJvNrr6Iu-MNfXtTA8K4SJciY",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url}}/applyJob/jobId/68596352453b986be6bce1fd",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"applyJob",
+												"jobId",
+												"68596352453b986be6bce1fd"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get all applied jobs by userId",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NTJiYzY3M2NkYTI4NDE5ZGEwNWM3NSIsInJvbGUiOiJjb21wYW55IiwiaXNBY3RpdmUiOnRydWUsInRva2VuVHlwZSI6ImFjY2VzcyIsImlhdCI6MTc1MDY4ODM3NiwiZXhwIjoxNzgyMjQ1OTc2LCJhdWQiOiJyb290IiwiaXNzIjoiY29tcGFueUBjb21wYW55LmNvbSIsInN1YiI6ImNvbXBhbnlAY29tcGFueS5jb20ifQ.TK5BJCBOodHGMKLOt7kJvNrr6Iu-MNfXtTA8K4SJciY",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"jobId\":\"\",\r\n    \"coverLetter\":\"\",\r\n    \"cv\":\"\",\r\n    \"video\":\"\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url}}/applyJob/applied/jobs",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"applyJob",
+												"applied",
+												"jobs"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Jobs by user",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NTJiYzY3M2NkYTI4NDE5ZGEwNWM3NSIsInJvbGUiOiJjb21wYW55IiwiaXNBY3RpdmUiOnRydWUsInRva2VuVHlwZSI6ImFjY2VzcyIsImlhdCI6MTc1MDY4ODM3NiwiZXhwIjoxNzgyMjQ1OTc2LCJhdWQiOiJyb290IiwiaXNzIjoiY29tcGFueUBjb21wYW55LmNvbSIsInN1YiI6ImNvbXBhbnlAY29tcGFueS5jb20ifQ.TK5BJCBOodHGMKLOt7kJvNrr6Iu-MNfXtTA8K4SJciY",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/jobs/by/userId/6852bc673cda28419da05c75",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"jobs",
+										"by",
+										"userId",
+										"6852bc673cda28419da05c75"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Jobs by id",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NTJiYzY3M2NkYTI4NDE5ZGEwNWM3NSIsInJvbGUiOiJjb21wYW55IiwiaXNBY3RpdmUiOnRydWUsInRva2VuVHlwZSI6ImFjY2VzcyIsImlhdCI6MTc1MDY4ODM3NiwiZXhwIjoxNzgyMjQ1OTc2LCJhdWQiOiJyb290IiwiaXNzIjoiY29tcGFueUBjb21wYW55LmNvbSIsInN1YiI6ImNvbXBhbnlAY29tcGFueS5jb20ifQ.TK5BJCBOodHGMKLOt7kJvNrr6Iu-MNfXtTA8K4SJciY",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/jobs/68596352453b986be6bce1fd",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"jobs",
+										"68596352453b986be6bce1fd"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "All Jobs",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NTJiYzY3M2NkYTI4NDE5ZGEwNWM3NSIsInJvbGUiOiJjb21wYW55IiwiaXNBY3RpdmUiOnRydWUsInRva2VuVHlwZSI6ImFjY2VzcyIsImlhdCI6MTc1MDY4ODM3NiwiZXhwIjoxNzgyMjQ1OTc2LCJhdWQiOiJyb290IiwiaXNzIjoiY29tcGFueUBjb21wYW55LmNvbSIsInN1YiI6ImNvbXBhbnlAY29tcGFueS5jb20ifQ.TK5BJCBOodHGMKLOt7kJvNrr6Iu-MNfXtTA8K4SJciY",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/jobs",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"jobs"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "All Featured Jobs",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NTJiYzY3M2NkYTI4NDE5ZGEwNWM3NSIsInJvbGUiOiJjb21wYW55IiwiaXNBY3RpdmUiOnRydWUsInRva2VuVHlwZSI6ImFjY2VzcyIsImlhdCI6MTc1MDY4ODM3NiwiZXhwIjoxNzgyMjQ1OTc2LCJhdWQiOiJyb290IiwiaXNzIjoiY29tcGFueUBjb21wYW55LmNvbSIsInN1YiI6ImNvbXBhbnlAY29tcGFueS5jb20ifQ.TK5BJCBOodHGMKLOt7kJvNrr6Iu-MNfXtTA8K4SJciY",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/jobs/all/featured/jobs",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"jobs",
+										"all",
+										"featured",
+										"jobs"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Featured Jobs for home",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NTJiYzY3M2NkYTI4NDE5ZGEwNWM3NSIsInJvbGUiOiJjb21wYW55IiwiaXNBY3RpdmUiOnRydWUsInRva2VuVHlwZSI6ImFjY2VzcyIsImlhdCI6MTc1MDY4ODM3NiwiZXhwIjoxNzgyMjQ1OTc2LCJhdWQiOiJyb290IiwiaXNzIjoiY29tcGFueUBjb21wYW55LmNvbSIsInN1YiI6ImNvbXBhbnlAY29tcGFueS5jb20ifQ.TK5BJCBOodHGMKLOt7kJvNrr6Iu-MNfXtTA8K4SJciY",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/jobs/all/featured/jobs/home",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"jobs",
+										"all",
+										"featured",
+										"jobs",
+										"home"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Job",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NTJiYzY3M2NkYTI4NDE5ZGEwNWM3NSIsInJvbGUiOiJjb21wYW55IiwiaXNBY3RpdmUiOnRydWUsInRva2VuVHlwZSI6ImFjY2VzcyIsImlhdCI6MTc1MDY4ODM3NiwiZXhwIjoxNzgyMjQ1OTc2LCJhdWQiOiJyb290IiwiaXNzIjoiY29tcGFueUBjb21wYW55LmNvbSIsInN1YiI6ImNvbXBhbnlAY29tcGFueS5jb20ifQ.TK5BJCBOodHGMKLOt7kJvNrr6Iu-MNfXtTA8K4SJciY",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"image\": \"\",\r\n  \"job_title\": \"Backend Developer\",\r\n  \"location\": \"Karachi, Pakistan\",\r\n  \"contract_type\": \"contract\",\r\n  \"job_category\": \"Information Technology\",\r\n  \"detailed_job_description\": \"Seeking an experienced backend developer to build and maintain APIs and server-side logic.\",\r\n  \"required_experience_level\": \"senior\",\r\n  \"application_method\": \"https://company.com/careers\",\r\n  \"publication_date\": \"2025-06-25T00:00:00.000Z\",\r\n  \"salary\": \"PKR 200,000 - 250,000\",\r\n  \"recruiter_Profile\": \"\",\r\n  \"phoneNo\": \"+92-301-7654321\",\r\n  \"skills\": [\"Node.js\", \"Express\", \"MongoDB\"],\r\n  \"perks\": \"Annual bonus, Paid vacations, Remote options\",\r\n  \"language\": \"English, Urdu\",\r\n  \"desired_start_date\": \"2025-07-10T00:00:00.000Z\",\r\n  \"duration\": \"6-month contract\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/jobs",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"jobs"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Posts",
+					"item": [
+						{
+							"name": "Share post",
+							"item": [
+								{
+									"name": "Share post",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NmJiMDc2MTg5NjlmZGQ2MmU5NDFjZSIsInJvbGUiOiJhSXVtbmkiLCJpc0FjdGl2ZSI6dHJ1ZSwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzUxODk3OTY0LCJleHAiOjE3ODM0NTU1NjQsImF1ZCI6InJvb3QiLCJpc3MiOiJjaGFpd2l0aGNvZGVAZ21haWwuY29tIiwic3ViIjoiY2hhaXdpdGhjb2RlQGdtYWlsLmNvbSJ9.764onMYA_fkXbysrJCdW8YKQFe4RriPHGvLCEd7WCVU",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"postId\":\"686bdbac1e708b3baff115a5\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url}}/post/share/",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"post",
+												"share",
+												""
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Save post",
+							"item": [
+								{
+									"name": "save & unsave",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NmJiMDc2MTg5NjlmZGQ2MmU5NDFjZSIsInJvbGUiOiJhSXVtbmkiLCJpc0FjdGl2ZSI6dHJ1ZSwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzUxODk3OTY0LCJleHAiOjE3ODM0NTU1NjQsImF1ZCI6InJvb3QiLCJpc3MiOiJjaGFpd2l0aGNvZGVAZ21haWwuY29tIiwic3ViIjoiY2hhaXdpdGhjb2RlQGdtYWlsLmNvbSJ9.764onMYA_fkXbysrJCdW8YKQFe4RriPHGvLCEd7WCVU",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n \"PostId\":\"686cee5c8129ac3f5930d0b0\"   \r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url}}/savePost/and/unSavePost",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"savePost",
+												"and",
+												"unSavePost"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get all saved posts",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NmJiMDc2MTg5NjlmZGQ2MmU5NDFjZSIsInJvbGUiOiJhSXVtbmkiLCJpc0FjdGl2ZSI6dHJ1ZSwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzUxODk3OTY0LCJleHAiOjE3ODM0NTU1NjQsImF1ZCI6InJvb3QiLCJpc3MiOiJjaGFpd2l0aGNvZGVAZ21haWwuY29tIiwic3ViIjoiY2hhaXdpdGhjb2RlQGdtYWlsLmNvbSJ9.764onMYA_fkXbysrJCdW8YKQFe4RriPHGvLCEd7WCVU",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/savePost/list",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"savePost",
+												"list"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Create post",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NmJhZGZmMTg5NjlmZGQ2MmU5NDFhYSIsInJvbGUiOiJhSXVtbmkiLCJpc0FjdGl2ZSI6dHJ1ZSwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzUxODk3Nzc0LCJleHAiOjE3ODM0NTUzNzQsImF1ZCI6InJvb3QiLCJpc3MiOiJtdWJpNDkwMEBnbWFpbC5jb20iLCJzdWIiOiJtdWJpNDkwMEBnbWFpbC5jb20ifQ.v5hvWM708lhdCy_r8qIT_D01E5FX_sGA1S63_C5YDas",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\r\n     \"image\": \"1751001317366-455f07ccbaab9650f836c774c8c0d14f2b6c2fe3.png\",\r\n    \"description\":\"Weekend Shopping Spree 🛒 Retail therapy hits different when there's a sale! 😍 What did you guys buy this weekend? #ShopTillYouDrop #HaulTime\"\r\n    // \"taggedUsers\":[]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/post",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"post"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get posts by user id",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NTJiYzY3M2NkYTI4NDE5ZGEwNWM3NSIsInJvbGUiOiJjb21wYW55IiwiaXNBY3RpdmUiOnRydWUsInRva2VuVHlwZSI6ImFjY2VzcyIsImlhdCI6MTc1MDc2MzM4NiwiZXhwIjoxNzgyMzIwOTg2LCJhdWQiOiJyb290IiwiaXNzIjoiY29tcGFueUBjb21wYW55LmNvbSIsInN1YiI6ImNvbXBhbnlAY29tcGFueS5jb20ifQ.__SyWqbOMUM6Y1N61lQmhFMevzKbkIJxUsMF0-xG2Q8",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/post/6852bc673cda28419da05c75",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"post",
+										"6852bc673cda28419da05c75"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get all posts",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NmJiMDc2MTg5NjlmZGQ2MmU5NDFjZSIsInJvbGUiOiJhSXVtbmkiLCJpc0FjdGl2ZSI6dHJ1ZSwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzUxODk3OTY0LCJleHAiOjE3ODM0NTU1NjQsImF1ZCI6InJvb3QiLCJpc3MiOiJjaGFpd2l0aGNvZGVAZ21haWwuY29tIiwic3ViIjoiY2hhaXdpdGhjb2RlQGdtYWlsLmNvbSJ9.764onMYA_fkXbysrJCdW8YKQFe4RriPHGvLCEd7WCVU",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/post/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"post",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get post by id",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NTJiYzY3M2NkYTI4NDE5ZGEwNWM3NSIsInJvbGUiOiJjb21wYW55IiwiaXNBY3RpdmUiOnRydWUsInRva2VuVHlwZSI6ImFjY2VzcyIsImlhdCI6MTc1MDc2MzM4NiwiZXhwIjoxNzgyMzIwOTg2LCJhdWQiOiJyb290IiwiaXNzIjoiY29tcGFueUBjb21wYW55LmNvbSIsInN1YiI6ImNvbXBhbnlAY29tcGFueS5jb20ifQ.__SyWqbOMUM6Y1N61lQmhFMevzKbkIJxUsMF0-xG2Q8",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/post/byId/685aaa5bcd26b8b0f6e832ee",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"post",
+										"byId",
+										"685aaa5bcd26b8b0f6e832ee"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete post by id",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/post/67319d9b4db0c85920a8b957",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"post",
+										"67319d9b4db0c85920a8b957"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update post",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \r\n    \"postId\":\"6752e2737cc19524e8b527ab\",\r\n    \"image\": \"1733477506450-2.jfif\",\r\n    \"category\":\"672b667ee2f90d7b8f71e3a7\",\r\n    \"title\":\"Updated Post\",\r\n    \"description\":\"This is post of the day\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/post/update",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"post",
+										"update"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Post reports",
+					"item": [
+						{
+							"name": "Report",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NTE1ZGY4OTQ4ZTQ2NWZhZjhiNGNiYiIsInJvbGUiOiJhbHVtbmkiLCJpc0FjdGl2ZSI6dHJ1ZSwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzUxMDAyNjgxLCJleHAiOjE3ODI1NjAyODEsImF1ZCI6InJvb3QiLCJpc3MiOiJhbHVtbmlAYWx1bW5pLmNvbSIsInN1YiI6ImFsdW1uaUBhbHVtbmkuY29tIn0.JSya-aMY_I0ii7ufuGcJIWa9Y05BV1hZhmFvv3jqFkw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"postId\":\"685e289a1b2a644a15f24d9a\",\r\n    \"reason\":\"Hateful speech\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/postReports",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"postReports"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Comments",
+					"item": [
+						{
+							"name": "Add comment",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NTE1ZGY4OTQ4ZTQ2NWZhZjhiNGNiYiIsInJvbGUiOiJhSXVtbmkiLCJpc0FjdGl2ZSI6dHJ1ZSwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzUxNDUxMDU0LCJleHAiOjE3ODMwMDg2NTQsImF1ZCI6InJvb3QiLCJpc3MiOiJhbHVtbmlAYWx1bW5pLmNvbSIsInN1YiI6ImFsdW1uaUBhbHVtbmkuY29tIn0.nmOvjhBs6-YtI7GSgCU_lVh5z7O4tipByZGnr7Xo8p0",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"comment\":\"Testing comment\",\r\n    \"postId\":\"685e289a1b2a644a15f24d9a\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/comment",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"comment"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get comments by post id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/comment/684ffd472d9ae5325114c404",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"comment",
+										"684ffd472d9ae5325114c404"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete by comment id & user id",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "// User id from token",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/comment/674972130ec79e7edcdbd6d3",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"comment",
+										"674972130ec79e7edcdbd6d3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get comment by id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/comment/getComment/6734408373fc1319b893c525",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"comment",
+										"getComment",
+										"6734408373fc1319b893c525"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Like post",
+					"item": [
+						{
+							"name": "Add like",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NTE1ZGY4OTQ4ZTQ2NWZhZjhiNGNiYiIsInJvbGUiOiJhSXVtbmkiLCJpc0FjdGl2ZSI6dHJ1ZSwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzUxNDUxMDU0LCJleHAiOjE3ODMwMDg2NTQsImF1ZCI6InJvb3QiLCJpc3MiOiJhbHVtbmlAYWx1bW5pLmNvbSIsInN1YiI6ImFsdW1uaUBhbHVtbmkuY29tIn0.nmOvjhBs6-YtI7GSgCU_lVh5z7O4tipByZGnr7Xo8p0",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"postId\":\"685e289a1b2a644a15f24d9a\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/like/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"like",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Liked by (users-list)",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/like/684ffd472d9ae5325114c404",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"like",
+										"684ffd472d9ae5325114c404"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Following & Followers",
+					"item": [
+						{
+							"name": "Send follow request",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NTE1ZGY4OTQ4ZTQ2NWZhZjhiNGNiYiIsInJvbGUiOiJhSXVtbmkiLCJpc0FjdGl2ZSI6dHJ1ZSwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzUxNDU4NDcxLCJleHAiOjE3ODMwMTYwNzEsImF1ZCI6InJvb3QiLCJpc3MiOiJhbHVtbmlAYWx1bW5pLmNvbSIsInN1YiI6ImFsdW1uaUBhbHVtbmkuY29tIn0.BGFuBUqeGHxPSDaMukWgLxgseuCJ8AxiTi9XiRtqfGU",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"followTo\": \"6852bc673cda28419da05c75\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/followRequest/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"followRequest",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get all follower requests",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NTE1ZGY4OTQ4ZTQ2NWZhZjhiNGNiYiIsInJvbGUiOiJhSXVtbmkiLCJpc0FjdGl2ZSI6dHJ1ZSwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzUxNDU4NDcxLCJleHAiOjE3ODMwMTYwNzEsImF1ZCI6InJvb3QiLCJpc3MiOiJhbHVtbmlAYWx1bW5pLmNvbSIsInN1YiI6ImFsdW1uaUBhbHVtbmkuY29tIn0.BGFuBUqeGHxPSDaMukWgLxgseuCJ8AxiTi9XiRtqfGU",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/followRequest/followers/request",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"followRequest",
+										"followers",
+										"request"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get all sent requests",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NTE1ZGY4OTQ4ZTQ2NWZhZjhiNGNiYiIsInJvbGUiOiJhSXVtbmkiLCJpc0FjdGl2ZSI6dHJ1ZSwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzUxNDU4NDcxLCJleHAiOjE3ODMwMTYwNzEsImF1ZCI6InJvb3QiLCJpc3MiOiJhbHVtbmlAYWx1bW5pLmNvbSIsInN1YiI6ImFsdW1uaUBhbHVtbmkuY29tIn0.BGFuBUqeGHxPSDaMukWgLxgseuCJ8AxiTi9XiRtqfGU",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/followRequest/sentRequests",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"followRequest",
+										"sentRequests"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Approve request",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NTE1ZGY4OTQ4ZTQ2NWZhZjhiNGNiYiIsInJvbGUiOiJhSXVtbmkiLCJpc0FjdGl2ZSI6dHJ1ZSwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzUxNDU4NDcxLCJleHAiOjE3ODMwMTYwNzEsImF1ZCI6InJvb3QiLCJpc3MiOiJhbHVtbmlAYWx1bW5pLmNvbSIsInN1YiI6ImFsdW1uaUBhbHVtbmkuY29tIn0.BGFuBUqeGHxPSDaMukWgLxgseuCJ8AxiTi9XiRtqfGU",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/followRequest/approve/686524fc1a7e22251a7942e8",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"followRequest",
+										"approve",
+										"686524fc1a7e22251a7942e8"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Followers list",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NTE1ZGY4OTQ4ZTQ2NWZhZjhiNGNiYiIsInJvbGUiOiJhSXVtbmkiLCJpc0FjdGl2ZSI6dHJ1ZSwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzUxNDU4NDcxLCJleHAiOjE3ODMwMTYwNzEsImF1ZCI6InJvb3QiLCJpc3MiOiJhbHVtbmlAYWx1bW5pLmNvbSIsInN1YiI6ImFsdW1uaUBhbHVtbmkuY29tIn0.BGFuBUqeGHxPSDaMukWgLxgseuCJ8AxiTi9XiRtqfGU",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/followRequest/followers/list/67ef6fb53f6c765209fa7d04",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"followRequest",
+										"followers",
+										"list",
+										"67ef6fb53f6c765209fa7d04"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Following list",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NTE1ZGY4OTQ4ZTQ2NWZhZjhiNGNiYiIsInJvbGUiOiJhSXVtbmkiLCJpc0FjdGl2ZSI6dHJ1ZSwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzUxNDU4NDcxLCJleHAiOjE3ODMwMTYwNzEsImF1ZCI6InJvb3QiLCJpc3MiOiJhbHVtbmlAYWx1bW5pLmNvbSIsInN1YiI6ImFsdW1uaUBhbHVtbmkuY29tIn0.BGFuBUqeGHxPSDaMukWgLxgseuCJ8AxiTi9XiRtqfGU",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/followRequest/following/list/67ef6fb53f6c765209fa7d04",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"followRequest",
+										"following",
+										"list",
+										"67ef6fb53f6c765209fa7d04"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "suggested people",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NTE1ZGY4OTQ4ZTQ2NWZhZjhiNGNiYiIsInJvbGUiOiJhSXVtbmkiLCJpc0FjdGl2ZSI6dHJ1ZSwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNzUxNDU4NDcxLCJleHAiOjE3ODMwMTYwNzEsImF1ZCI6InJvb3QiLCJpc3MiOiJhbHVtbmlAYWx1bW5pLmNvbSIsInN1YiI6ImFsdW1uaUBhbHVtbmkuY29tIn0.BGFuBUqeGHxPSDaMukWgLxgseuCJ8AxiTi9XiRtqfGU",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/followRequest/discover/people",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"followRequest",
+										"discover",
+										"people"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Decline request",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/followRequest/reject/67f500e1d775fad3466dd5a0",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"followRequest",
+										"reject",
+										"67f500e1d775fad3466dd5a0"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:5009/api/v1",
+			"type": "string"
+		},
+		{
+			"key": "base_live_url",
+			"value": "http://194.195.92.92/alumni-backend/api/v1",
+			"type": "string"
+		}
+	]
+}

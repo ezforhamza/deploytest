@@ -1,0 +1,39 @@
+/* Custom scrollbar styles for auth forms */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #CBD5E1 #F1F5F9;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #F1F5F9;
+  border-radius: 10px;
+  margin: 4px 0;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 10px;
+  border: 2px solid #F1F5F9;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+.custom-scrollbar::-webkit-scrollbar-corner {
+  background: #F1F5F9;
+}
+
+/* Form container spacing */
+.form-container {
+  padding: 0 2rem;
+}
+
+.form-scrollable {
+  padding-right: 1rem;
+  margin-right: -1rem;
+}

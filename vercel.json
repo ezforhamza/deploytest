@@ -1,0 +1,13 @@
+{
+  "functions": {
+    "api/[...path].js": {
+      "maxDuration": 30
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/uploads/:path*",
+      "destination": "http://194.195.92.92/alumni-backend/uploads/:path*"
+    }
+  ]
+}

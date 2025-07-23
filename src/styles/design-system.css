@@ -1,0 +1,306 @@
+/* src/styles/design-system.css */
+
+/* Import Lexend font from Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800;900&display=swap");
+
+/* ===== CSS CUSTOM PROPERTIES (DESIGN TOKENS) ===== */
+:root {
+  /* ===== COLOR PALETTE ===== */
+
+  /* Primary Colors */
+  --color-primary: #1090cf;
+  --color-primary-rgb: 16, 144, 207;
+
+  /* Secondary Colors */
+  --color-secondary: #67c6ff;
+  --color-secondary-light: #d2f5ff;
+  --color-secondary-orange: #e69c24;
+
+  /* Neutral Colors */
+  --color-dark: #000000;
+  --color-text: #58606c;
+  --color-white: #ffffff;
+
+  /* Status Colors */
+  --color-warning: #f1c84e;
+  --color-danger: #eb5757;
+  --color-success: #209652;
+
+  /* ===== TYPOGRAPHY SYSTEM ===== */
+
+  /* Font Family */
+  --font-family-primary: "Lexend", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+
+  /* Font Sizes (converted from rem to pixels for reference) */
+  --font-size-h1: 5.375rem; /* ~86px */
+  --font-size-h2: 3.125rem; /* ~50px */
+  --font-size-h3: 1.75rem; /* ~28px */
+  --font-size-h4: 1.9531rem; /* ~31.25px */
+  --font-size-h5: 1.5625rem; /* ~25px */
+  --font-size-h6: 1.25rem; /* ~20px */
+  --font-size-text: 1rem; /* ~16px */
+  --font-size-subtitle: 0.8rem; /* ~12.8px */
+  --font-size-button: 0.8331rem; /* ~13.33px */
+  --font-size-small: 0.64rem; /* ~10.24px */
+
+  /* Font Weights */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Letter Spacing */
+  --letter-spacing-tight: -1.5%;
+  --letter-spacing-normal: -0.5%;
+  --letter-spacing-none: 0%;
+
+  /* Line Heights */
+  --line-height-tight: 1.1;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.6;
+
+  /* ===== SPACING SYSTEM ===== */
+  --spacing-xs: 0.25rem; /* 4px */
+  --spacing-sm: 0.5rem; /* 8px */
+  --spacing-md: 1rem; /* 16px */
+  --spacing-lg: 1.5rem; /* 24px */
+  --spacing-xl: 2rem; /* 32px */
+  --spacing-2xl: 3rem; /* 48px */
+  --spacing-3xl: 4rem; /* 64px */
+
+  /* ===== BORDER RADIUS ===== */
+  --border-radius-sm: 0.25rem; /* 4px */
+  --border-radius-md: 0.5rem; /* 8px */
+  --border-radius-lg: 0.75rem; /* 12px */
+  --border-radius-xl: 1rem; /* 16px */
+
+  /* ===== SHADOWS ===== */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* ===== TYPOGRAPHY CLASSES ===== */
+
+/* Base font settings */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--font-family-primary);
+  font-size: 16px; /* Base font size */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family-primary);
+  color: var(--color-text);
+  line-height: var(--line-height-normal);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Heading Styles */
+.typography-h1 {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-tight);
+  line-height: var(--line-height-tight);
+  margin: 0;
+  color: var(--color-dark);
+}
+
+.typography-h2 {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-normal);
+  line-height: var(--line-height-tight);
+  margin: 0;
+  color: var(--color-dark);
+}
+
+.typography-h3 {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-none);
+  line-height: var(--line-height-tight);
+  margin: 0;
+  color: var(--color-dark);
+}
+
+.typography-h4 {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-h4);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-none);
+  line-height: var(--line-height-tight);
+  margin: 0;
+  color: var(--color-dark);
+}
+
+.typography-h5 {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-h5);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-none);
+  line-height: var(--line-height-tight);
+  margin: 0;
+  color: var(--color-dark);
+}
+
+.typography-h6 {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-h6);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-none);
+  line-height: var(--line-height-tight);
+  margin: 0;
+  color: var(--color-dark);
+}
+
+.typography-text {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-text);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: var(--letter-spacing-none);
+  line-height: var(--line-height-normal);
+  margin: 0;
+  color: var(--color-text);
+}
+
+.typography-subtitle {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-subtitle);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: var(--letter-spacing-none);
+  line-height: var(--line-height-normal);
+  margin: 0;
+  color: var(--color-text);
+}
+
+.typography-button {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-button);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: var(--letter-spacing-none);
+  line-height: var(--line-height-normal);
+  margin: 0;
+  color: var(--color-text);
+}
+
+.typography-small {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: var(--letter-spacing-none);
+  line-height: var(--line-height-normal);
+  margin: 0;
+  color: var(--color-text);
+}
+
+/* ===== COLOR UTILITY CLASSES ===== */
+
+/* Text Colors */
+.text-primary {
+  color: var(--color-primary);
+}
+.text-secondary {
+  color: var(--color-secondary);
+}
+.text-dark {
+  color: var(--color-dark);
+}
+.text-white {
+  color: var(--color-white);
+}
+.text-muted {
+  color: var(--color-text);
+}
+.text-warning {
+  color: var(--color-warning);
+}
+.text-danger {
+  color: var(--color-danger);
+}
+.text-success {
+  color: var(--color-success);
+}
+
+/* Background Colors */
+.bg-primary {
+  background-color: var(--color-primary);
+}
+.bg-secondary {
+  background-color: var(--color-secondary);
+}
+.bg-secondary-light {
+  background-color: var(--color-secondary-light);
+}
+.bg-dark {
+  background-color: var(--color-dark);
+}
+.bg-white {
+  background-color: var(--color-white);
+}
+.bg-warning {
+  background-color: var(--color-warning);
+}
+.bg-danger {
+  background-color: var(--color-danger);
+}
+.bg-success {
+  background-color: var(--color-success);
+}
+
+/* ===== RESPONSIVE TYPOGRAPHY ===== */
+@media (max-width: 768px) {
+  .typography-h1 {
+    font-size: 3rem;
+  }
+  .typography-h2 {
+    font-size: 2.5rem;
+  }
+  .typography-h3 {
+    font-size: 1.5rem;
+  }
+  .typography-h4 {
+    font-size: 1.25rem;
+  }
+  .typography-h5 {
+    font-size: 1.125rem;
+  }
+  .typography-h6 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .typography-h1 {
+    font-size: 2.5rem;
+  }
+  .typography-h2 {
+    font-size: 2rem;
+  }
+  .typography-h3 {
+    font-size: 1.25rem;
+  }
+  .typography-h4 {
+    font-size: 1.125rem;
+  }
+  .typography-h5 {
+    font-size: 1rem;
+  }
+  .typography-h6 {
+    font-size: 0.875rem;
+  }
+}
